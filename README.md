@@ -25,6 +25,8 @@ cd agent-cronjobs-template/<任务目录>
 # 按 README 安装依赖、修改配置、测试运行
 ```
 
+> **注意**：安装前请确认 Agent 环境中存在 cronjob prompt 里提到的工具（如 `send_email`、`web_extract` 等），缺失的工具需要自行配置或替换。
+
 ## 目录结构
 
 ```
@@ -34,7 +36,3 @@ cd agent-cronjobs-template/<任务目录>
 ├── snapshot.jpeg
 └── scripts/
 ```
-
-
-
-> **注意**：安装前请确认 Agent 环境中存在 cronjob prompt 里提到的工具（如 `send_email`、`web_extract` 等），缺失的工具需要自行配置或替换。
