@@ -2,7 +2,7 @@
 
 自动采集 22 个财经网站的每日新闻，经 TF-IDF 粗筛 + AI 语义精筛后，生成专业宏观策略简报并发送邮件。
 
-> 参考文章：[用 Hermes Agent 搭建每日财经新闻自动化工作流](https://zhuanlan.zhihu.com/p/2012947339308983868)
+> 参考文章：[[手把手] 如何0代码用openclaw定时推送晨报和简评：金融人的AI助理](https://zhuanlan.zhihu.com/p/2012947339308983868)
 
 ![效果预览](snapshot.jpeg)
 
@@ -19,14 +19,30 @@ Python 采集脚本 → JSON stdout → Agent 语义分析 → HTML 邮件 + CSV
 
 ## 覆盖数据源（22个）
 
-| 类型 | 来源 |
-|------|------|
-| 综合财经 | 华尔街见闻、第一财经、财新、新浪财经、凤凰网财经、新华财经 |
-| 官方机构 | 发改委、财政部、金管总局、人民银行、美联储 |
-| 财经媒体 | 财联社、上证报、证券时报、FT中文网 |
-| 科技商业 | 36氪、虎嗅网、TechCrunch |
-| 数据/能源 | Trading Economics、百川盈孚、财新-能源 |
-| 其他 | 中国经济网 |
+| 类型 | 来源 | URL |
+|------|------|-----|
+| 综合财经 | 华尔街见闻 | https://wallstreetcn.com/ |
+| 综合财经 | 第一财经 | https://www.yicai.com/ |
+| 综合财经 | 财新 | https://www.caixin.com/ |
+| 综合财经 | 新浪财经 | https://finance.sina.com.cn/ |
+| 综合财经 | 凤凰网财经 | https://finance.ifeng.com/ |
+| 综合财经 | 新华财经 | https://www.cnfin.com/ |
+| 官方机构 | 发改委 | https://www.ndrc.gov.cn/ |
+| 官方机构 | 财政部 | https://www.mof.gov.cn/zhengwuxinxi/ |
+| 官方机构 | 金管总局 | https://www.nfra.gov.cn/ |
+| 官方机构 | 人民银行 | https://www.pbc.gov.cn/ |
+| 官方机构 | 美联储 | https://www.federalreserve.gov/default.htm |
+| 财经媒体 | 财联社 | https://www.cls.cn/ |
+| 财经媒体 | 上证报 | https://www.cnstock.com/ |
+| 财经媒体 | 证券时报 | https://www.stcn.com/ |
+| 财经媒体 | FT中文网 | https://m.ftchinese.com/ |
+| 科技商业 | 36氪 | https://www.36kr.com/ |
+| 科技商业 | 虎嗅网 | https://www.huxiu.com/ |
+| 科技商业 | TechCrunch | https://techcrunch.com/ |
+| 数据/能源 | Trading Economics | https://tradingeconomics.com/ |
+| 数据/能源 | 百川盈孚 | https://www.baiinfo.com/ |
+| 数据/能源 | 财新-能源 | https://www.caixin.com/energy/ |
+| 其他 | 中国经济网 | http://www.ce.cn/ |
 
 ## 文件说明
 
