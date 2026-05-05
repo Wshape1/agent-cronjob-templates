@@ -1,0 +1,10 @@
+{
+  "email": {
+    "to": "youremail@example.com",
+    "cc": "",
+    "subject_prefix": "【今日新闻简报】"
+  },
+  "sites_count": 22,
+  "max_per_site": 10,
+  "similarity_threshold": 0.85
+}

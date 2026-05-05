@@ -1,0 +1,7 @@
+{
+  "email": {
+    "to": "youremail@example.com",
+    "cc": "",
+    "subject_prefix": "【GitHub Trending】"
+  }
+}
