@@ -8,6 +8,7 @@
 |------|------|
 | [financial_news](financial_news/) | 每日财经新闻简报 — 22 个数据源，TF-IDF + AI 语义精筛，输出 Top 10 |
 | [github_trending](github_trending/) | GitHub Trending 每日简报 — 近 24 小时 Top 10 热门仓库 |
+| [news_flash](news_flash/) | 新闻快闪 — 实时财经快讯，每2小时推送飞书，基金视角精选 Top 3 |
 
 ## 快速开始
 
