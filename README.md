@@ -14,14 +14,14 @@
 把下面这段 prompt 直接发给 Agent：
 
 ```
-从 github.com/wshape1/agent-cronjobs-template 克隆仓库（备用 gitee.com/wshape1/agent-cronjobs-template ），帮我安装其中一个 CronJob，阅读对应目录的 README 完成配置。
+从 github.com/wshape1/agent-cronjob-templates 克隆仓库（备用 gitee.com/wshape1/agent-cronjob-templates ），帮我安装其中一个 CronJob，阅读对应目录的 README 完成配置。
 ```
 
 或者手动：
 
 ```bash
-git clone https://github.com/wshape1/agent-cronjobs-template.git
-cd agent-cronjobs-template/<任务目录>
+git clone https://github.com/wshape1/agent-cronjob-templates.git
+cd agent-cronjob-templates/<任务目录>
 # 按 README 安装依赖、修改配置、测试运行
 ```
 

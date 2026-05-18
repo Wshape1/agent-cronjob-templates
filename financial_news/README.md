@@ -62,7 +62,7 @@ financial_news/
 
 ```
 帮我安装每日财经新闻简报 CronJob：
-1. 克隆仓库 git clone https://github.com/wshape1/agent-cronjobs-template.git （如失败用备用源 https://gitee.com/wshape1/agent-cronjobs-template.git ）
+1. 克隆仓库 git clone https://github.com/wshape1/agent-cronjob-templates.git （如失败用备用源 https://gitee.com/wshape1/agent-cronjob-templates.git ）
 2. 安装 Python 依赖：pip install httpx beautifulsoup4 lxml jieba
 3. 将 financial_news/prompt.md 设为 CronJob 的 prompt
 4. 将 financial_news/scripts/financial_news_collect.py 设为采集脚本
