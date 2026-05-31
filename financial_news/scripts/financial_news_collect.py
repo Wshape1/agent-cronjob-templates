@@ -660,16 +660,18 @@ def main():
         _client.close()
 
     # 输出 JSON 到 stdout（唯一输出，确保干净）
-    # 清除所有 U+FEFF (BOM) 字符，避免触发 cron 注入扫描器
-    def _strip_bom(obj):
+    # 清除不可见 Unicode 字符，避免触发 cron 注入扫描器
+    # U+FEFF (BOM), U+200B (zero-width space), U+200C, U+200D, U+2060, U+202A-U+202E
+    _INVISIBLE_RE = re.compile(r'[\u200b\u200c\u200d\u2060\ufeff\u202a-\u202e]')
+    def _strip_invisible(obj):
         if isinstance(obj, str):
-            return obj.replace('\ufeff', '')
+            return _INVISIBLE_RE.sub('', obj)
         if isinstance(obj, list):
-            return [_strip_bom(i) for i in obj]
+            return [_strip_invisible(i) for i in obj]
         if isinstance(obj, dict):
-            return {k: _strip_bom(v) for k, v in obj.items()}
+            return {k: _strip_invisible(v) for k, v in obj.items()}
         return obj
-    output = _strip_bom(output)
+    output = _strip_invisible(output)
     json_str = json.dumps(output, ensure_ascii=False)
     sys.stdout.write(json_str)
     sys.stdout.flush()
